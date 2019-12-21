@@ -9,25 +9,25 @@ class ProductProvider extends Component {
     sidebarOpen: false,
     cartOpen: false,
     cartItems: 10,
-    links: linkData
+    links: linkData,
+    cart: []
   };
 
   handleSidebar = () => {
     this.setState({ sidebarOpen: !this.state.sidebarOpen });
   };
 
-  handleCartOpen = () => {
-    this.setState({ cartOpen: !this.state.cartOpen });
+  // hanldle sart
+  handleCart = () => {
+    this.setState({ cartOpen: !this.state.sidebarOpen });
   };
-  // close cart
-
+  //close cart
   closeCart = () => {
     this.setState({ cartOpen: false });
   };
-
-  // open cart
+  // open
   openCart = () => {
-    this.setState({ openCart: true });
+    this.setState({ cartOpen: true });
   };
 
   render() {
@@ -36,7 +36,7 @@ class ProductProvider extends Component {
         value={{
           ...this.state,
           handleSidebar: this.handleSidebar,
-          handleCartOpen: this.handleCartOpen,
+          handleCart: this.handleCart,
           closeCart: this.closeCart,
           openCart: this.openCart
         }}
