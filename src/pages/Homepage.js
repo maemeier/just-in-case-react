@@ -7,7 +7,9 @@ export default function HomePage() {
   return (
     <>
       <Hero title="JUST-IN-CASE" text="Your Iphone need a case" max="true">
-        <Link to="/products">Our Products</Link>
+        <Link to="/products" className="main-link">
+          Our Products
+        </Link>
       </Hero>
     </>
   );

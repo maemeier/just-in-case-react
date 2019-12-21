@@ -1,5 +1,5 @@
 import React from "react";
-
+import Info from "../components/AboutPage/info";
 export default function AboutPage() {
   return (
     <>
